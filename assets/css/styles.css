@@ -153,6 +153,10 @@ body.light-theme{
   background-color: hsla(var(--second-hue),32%, 90%, .8);
 }
 
+.light-theme .home__handle{
+  /* box-shadow: 8px 8px 10px #22e8e8; */
+}
+
 .light-theme .section__subtitle{
   color: var(--text-color);
 }
@@ -369,6 +373,8 @@ body.light-theme{
   align-items: flex-end;
   justify-content: center;
   overflow: hidden;
+  /* box-shadow: 4px 4px 10px #cee2e2; */
+
 }
 
 .home__buttons{
@@ -570,6 +576,11 @@ body.light-theme{
   background-color: var(--container-color);
   padding: 3rem 1.5rem 1.5rem;
   border-radius: 1rem;
+
+  /* new code */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .services__title{
