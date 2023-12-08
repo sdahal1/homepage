@@ -744,6 +744,18 @@ body.light-theme{
   border-radius: 1.5rem;
   margin-bottom: 3rem;
 }
+/* new code */
+.testimonial__card__header{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial__card__header i{
+  width: 50%;
+  font-size: var(--smaller-font-size);
+}
 
 .testimonial__img{
   width: 60px;
