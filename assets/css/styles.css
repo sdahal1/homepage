@@ -618,7 +618,7 @@ body.light-theme{
   opacity: 0;
   /* transition: .3s; */
   z-index: var(--z-modal);
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .services__modal-content{
