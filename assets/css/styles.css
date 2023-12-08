@@ -759,6 +759,8 @@ body.light-theme{
 
 .testimonial__description{
   font-size: var(--small-font-size);
+  overflow: scroll;
+  height: 200px;
 }
 
 
