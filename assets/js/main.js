@@ -94,7 +94,7 @@ const scrollActive = () =>{
 			  sectionTop = current.offsetTop - 58,
 			  sectionId = current.getAttribute('id'),
 			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-
+        // console.log("********", sectionsClass);
 		if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
 			sectionsClass.classList.add('active-link')
 		}else{
@@ -147,3 +147,23 @@ sr.reveal(`.home__data`)
 sr.reveal(`.home__handle`, {delay: 700})
 sr.reveal(`.home__social, .home__scroll`, {delay: 900, origin: 'bottom'})
 
+
+/*=============== EMAIL JS ===============*/
+emailjs.init('njr5lxe7yQZHyiPaV')
+
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        // console.log("submitted form");
+        event.preventDefault();
+        // generate a five digit number for the contact_number variable
+        // this.contact_number.value = Math.random() * 100000 | 0;
+        // these IDs from the previous steps
+        emailjs.sendForm('service_8de57m5','template_u9cjkbk', '#contact-form', 'njr5lxe7yQZHyiPaV')
+            .then(function() {
+                console.log('SUCCESS!');
+                document.getElementById('contact-form').reset();
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+    });
+}

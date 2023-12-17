@@ -24,6 +24,9 @@
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="./assets/css/styles.css" />
 
+        <!--=============== EmailJS ===============-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
         <title>Saurabh Dahal &#169;</title>
     </head>
     <body>
@@ -54,6 +57,11 @@
                         <li class="nav__item">
                             <a href="#work" class="nav__link">
                                 <i class="bx bx-briefcase-alt-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#testimonial" class="nav__link">
+                                <i class='bx bx-user-voice'></i>
                             </a>
                         </li>
 
@@ -713,20 +721,20 @@
                     </div>
                     <div class="contact__content">
                         <h3 class="contact__title">Write me your project</h3>
-                        <form action="" class="contact__form">
+                        <form action="" class="contact__form" id="contact-form">
                             <div class="contact__form-div">
                                 <label for="name_input" class="contact__form-tag">Names</label>
-                                <input type="text" placeholder="Insert your name" class="contact__form-input" id="name_input">
+                                <input type="text" placeholder="Insert your name" class="contact__form-input" id="name_input" name="user_name">
                             </div>
 
                             <div class="contact__form-div">
                                 <label for="email_input" class="contact__form-tag">Mail</label>
-                                <input type="email" placeholder = "Insert your email" class="contact__form-input" id="email_input">
+                                <input type="email" placeholder = "Insert your email" class="contact__form-input" id="email_input" name="user_email">
                             </div>
 
                             <div class="contact__form-div contact__form-area">
-                                <label for="project_input" class="contact__form-tag">Project</label>
-                                <textarea name="" cols="30" rows="10" class="contact__form-input" placeholder="Write your project" id="project_input"></textarea>
+                                <label for="message_input" class="contact__form-tag">Message</label>
+                                <textarea cols="30" rows="10" class="contact__form-input" placeholder="Write me your inquiry" id="message_input" name="user_message"></textarea>
                             </div>
                             <button class="button">Send Message</button>
                         </form>
