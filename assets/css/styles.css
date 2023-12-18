@@ -45,6 +45,11 @@
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
   --tiny-font-size: .625rem;
+  /* --normal-font-size: 1.3rem;
+  --small-font-size: 1.1rem;
+  --smaller-font-size: 1rem; */
+  
+
 
   /*========== Font weight ==========*/
   --font-medium: 500;
@@ -63,9 +68,11 @@
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --normal-font-size: 1.3rem;
+    --small-font-size: 1.1rem;
+    --smaller-font-size: 1rem;
+    --tiny-font-size: .8rem;
+
   }
 }
 
@@ -1074,6 +1081,7 @@ body.light-theme{
   }
   .work__img{
     width: 295px;
+    height: 195px;
   }
   .contact__info{
     grid-template-columns: 300px;
@@ -1149,7 +1157,9 @@ body.light-theme{
   }
 
   .about__img{
-    width: 350px;
+    /* width: 350px; */
+    width: 450px;
+
   }
 
   .about__data{
