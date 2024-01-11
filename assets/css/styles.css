@@ -694,6 +694,7 @@ body.light-theme{
 .work__filters{
   display: flex;
   /* border: 1px solid red; */
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   column-gap: .75rem;
@@ -714,11 +715,47 @@ body.light-theme{
   /* border: 1px solid pink; */
   padding: 1rem;
   border-radius: 1rem;
+  /* adding new here */
+  position: relative;
+  overflow: hidden
+}
+
+.work__overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0); /*transparent initially*/
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.5s ease; /*transition for smooth effect */
+  color: black;
+  padding: 1rem;
+  /* font-size: var(--smaller-font-size); */
+}
+.work__overlay a {
+  display: block;
+  margin: 10px;
+  padding: 8px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+}
+.work__card:hover .work__overlay {
+  opacity: 0.9; /* Adjust the opacity level as needed */
+  background-color: var(--first-color); /* Semi-transparent black background */
 }
 
 .work__img{
   border-radius: 1rem;
   margin-bottom: .75rem;
+  object-fit: cover;
   /* margin: 0 auto; */
 }
 
@@ -737,6 +774,7 @@ body.light-theme{
   display: flex;
   align-items: center;
   column-gap: .25rem;
+  /* background-color: var(--body-color); */
 }
 
 .work__button:hover .work__icon{
@@ -746,6 +784,30 @@ body.light-theme{
 .work__icon{
   font-size: 1.2rem;
   transition: .4s;
+}
+
+.work__footer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  /* border: 1px solid red; */
+}
+
+.work__footer-tech{
+  border: 1px solid black;
+  border-radius: .3rem;
+  font-size: var(--smaller-font-size);
+  background-color: var(--first-color);
+  padding: .3rem .5rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.work__footer-tech i{
+  font-size: 1rem;
 }
 
 /* Active item work*/
@@ -984,7 +1046,7 @@ body.light-theme{
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For small devices less than or equal to 320px*/
+/* For small devices less than or equal to 320px. TEST 280-320px */
 @media screen and (max-width: 320px){
   .nav__menu{
     padding: 1rem 1.5rem;
@@ -1016,7 +1078,7 @@ body.light-theme{
     font-size: var(--small-font-size);
   }
   .services__container{
-    grid-template-columns: 145px;
+    grid-template-columns: 100%;
     justify-content: center;
   }
   .work__item{
@@ -1027,11 +1089,13 @@ body.light-theme{
   .work__filters{
     column-gap: .25rem;
     /* border: 1px solid red; */
+    /* padding: 1rem; */
+    /* width: 100px; */
 
   }
 }
 
-/* For medium devices at least 576px*/
+/* For medium devices at least 576px. TEST 576 - 766px */
 @media screen and (min-width:576px){
   .nav__menu{
     width: 328px;
@@ -1078,11 +1142,12 @@ body.light-theme{
     /* border: 2px solid red; */
     /* prevents the pictures of the portfolio projects from being on the left side. Centers it and makes the container not stetch with the white space - justify-content on a grid*/
     justify-content: center;
+    grid-template-columns: repeat(1, 500px);
   }
-  .work__img{
+  /* .work__img{
     width: 295px;
     height: 195px;
-  }
+  } */
   .contact__info{
     grid-template-columns: 300px;
     justify-content: center;
@@ -1094,12 +1159,15 @@ body.light-theme{
 }
 
 
-/* For devices equal to or over 767px*/
+/* For devices equal to or over 767px. TEST 767-992px */
 @media screen and (min-width:767px){
+
+  .services__container{
+    grid-template-columns: repeat(2, 300px);
+  }
   .work__container{
     /* border: 1px solid red; */
-    grid-template-columns: repeat(2, max-content);
-    
+    grid-template-columns: repeat(2, 300px);
   }
 
   .contact__container{
@@ -1109,7 +1177,7 @@ body.light-theme{
   }
 }
 
-/* for devices larger than 991px */
+/* for devices larger than 991px. TEST 992-Largest wide screen*/
 @media screen and (min-width: 992px){
   .container{
     margin-left: auto;
@@ -1182,12 +1250,12 @@ body.light-theme{
   }
 
   .skills__container{
-    grid-template-columns: repeat(2,350px);
+    grid-template-columns: repeat(2,450px);
     column-gap: 3rem;
   }
 
   .services__container{
-    grid-template-columns: repeat(3,192px);
+    grid-template-columns: repeat(3,240px);
     column-gap: 3rem;
   }
   .services__card{
@@ -1196,6 +1264,7 @@ body.light-theme{
   
   .work__container{
     gap: 3rem;
+    grid-template-columns: repeat(2, 450px);
   }
   .work__card{
     padding: 1.25rem;
