@@ -796,7 +796,7 @@ body.light-theme{
 .work__footer-tech{
   border: 1px solid black;
   border-radius: .3rem;
-  font-size: var(--smaller-font-size);
+  font-size: var(--tiny-font-size);
   background-color: var(--first-color);
   padding: .3rem .5rem;
   color: black;
@@ -807,7 +807,7 @@ body.light-theme{
 }
 
 .work__footer-tech i{
-  font-size: 1rem;
+  font-size: var(--tiny-font-size)
 }
 
 /* Active item work*/
