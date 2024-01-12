@@ -34,6 +34,31 @@ modalClose.forEach((mc,i)=>{
         })
     })
 })
+
+
+/*=============== WORK MODAL ===============*/
+const workModalViews = document.querySelectorAll(".work__modal"),
+  workModalBtns = document.querySelectorAll(".work__button-modal"),
+  workModalClose = document.querySelectorAll(".work__modal-close")
+
+let workModal = function(modalClick){
+    workModalViews[modalClick].classList.add('active-modal')
+}
+
+workModalBtns.forEach((mb,i)=>{
+  mb.addEventListener("click", ()=>{
+      workModal(i)
+  })
+})
+
+workModalClose.forEach((mc,i)=>{
+  mc.addEventListener("click", ()=>{
+      workModalViews.forEach(mv=>{
+          mv.classList.remove("active-modal");
+      })
+  })
+})
+
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 let mixerPortfolio = mixitup('.work__container', {
     selectors: {

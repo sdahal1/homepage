@@ -1,845 +1,872 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!--=============== FAVICON ===============-->
-        <link
-            rel="shortcut icon"
-            href="assets/img/codeSymbol.png"
-            type="image/x-icon"
-        />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!--=============== BOXICONS ===============-->
-        <link
-            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-            rel="stylesheet"
-        />
-        <!--================ TECH ICONS ================-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="assets/img/codeSymbol.png" type="image/x-icon" />
+
+  <!--=============== BOXICONS ===============-->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!--================ TECH ICONS ================-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
 
-        <!--=============== SWIPER CSS ===============-->
-        <!-- <link rel="stylesheet" href="" /> -->
-        <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
+  <!--=============== SWIPER CSS ===============-->
+  <!-- <link rel="stylesheet" href="" /> -->
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="./assets/css/styles.css" />
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
 
-        <!--=============== EmailJS ===============-->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!--=============== EmailJS ===============-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-        <title>Saurabh Dahal &#169;</title>
-    </head>
-    <body>
-        <!--=============== HEADER ===============-->
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">Saurabh Dahal</a>
-                <div class="nav__menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="bx bx-home-alt"></i>
-                            </a>
-                        </li>
+  <title>Saurabh Dahal &#169;</title>
+</head>
 
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="bx bx-user"></i>
-                            </a>
-                        </li>
+<body>
+  <!--=============== HEADER ===============-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">Saurabh Dahal</a>
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link active-link">
+              <i class="bx bx-home-alt"></i>
+            </a>
+          </li>
 
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="bx bx-book"></i>
-                            </a>
-                        </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">
+              <i class="bx bx-user"></i>
+            </a>
+          </li>
 
-                        <li class="nav__item">
-                            <a href="#work" class="nav__link">
-                                <i class="bx bx-briefcase-alt-2"></i>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#testimonial" class="nav__link">
-                                <i class='bx bx-user-voice'></i>
-                            </a>
-                        </li>
+          <li class="nav__item">
+            <a href="#skills" class="nav__link">
+              <i class="bx bx-book"></i>
+            </a>
+          </li>
 
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="bx bx-message-square-detail"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Theme change button  -->
-                <i class="bx bx-moon change-theme" id="theme-button"></i>
-            </nav>
-        </header>
+          <li class="nav__item">
+            <a href="#work" class="nav__link">
+              <i class="bx bx-briefcase-alt-2"></i>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a href="#testimonial" class="nav__link">
+              <i class='bx bx-user-voice'></i>
+            </a>
+          </li>
 
-        <!--=============== MAIN ===============-->
-        <main class="main">
-            <!--=============== HOME ===============-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__data">
-                        <span class="home__greeting">Hello, I'm</span>
-                        <h1 class="home__name">Saurabh Dahal</h1>
-                        <h3 class="home__education">
-                            Full Stack Software Developer
-                        </h3>
-                        <div class="home__buttons">
-                            <a
-                                download=""
-                                href="./assets/pdf/Saurabh Dahal Resume 2024.pdf"
-                                class="button button--ghost"
-                            >
-                                Download CV
-                            </a>
-                            <a href="#about" class="button">About me</a>
-                        </div>
-                    </div>
-                    <div class="home__handle">
-                        <img src="./assets/img/profilePic.png" alt="" class="home__img" />
-                    </div>
-                    <div class="home__social">
-                        <a
-                            href="https://www.linkedin.com/in/saurabhdahal/" target="_blank"
-                            class="home__social-link"
-                        >
-                            <i class="bx bxl-linkedin-square"></i>
-                        </a>
-                        <a
-                            href="https://github.com/sdahal1" target="_blank"
-                            class="home__social-link"
-                        >
-                            <i class="bx bxl-github"></i>
-                        </a>
-                        <a
-                            href="https://www.youtube.com/@instructorrob" target="_blank"
-                            class="home__social-link"
-                        >
-                            <i class="bx bxl-youtube"></i>
-                        </a>
-                    </div>
-                    <a href="#about" class="home__scroll">
-                        <i class="bx bx-mouse home__scroll-icon"></i>
-                        <span class="home__scroll-name">Scroll Down</span>
-                    </a>
-                </div>
-            </section>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">
+              <i class="bx bx-message-square-detail"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Theme change button  -->
+      <i class="bx bx-moon change-theme" id="theme-button"></i>
+    </nav>
+  </header>
 
-            <!--=============== ABOUT ===============-->
-            <section class="about section" id="about">
-                <span class="section__subtitle">My Intro</span>
-                <h2 class="section__title">About Me</h2>
+  <!--=============== MAIN ===============-->
+  <main class="main">
+    <!--=============== HOME ===============-->
+    <section class="home section" id="home">
+      <div class="home__container container grid">
+        <div class="home__data">
+          <span class="home__greeting">Hello, I'm</span>
+          <h1 class="home__name">Saurabh Dahal</h1>
+          <h3 class="home__education">
+            Full Stack Software Developer
+          </h3>
+          <div class="home__buttons">
+            <a download="" href="./assets/pdf/Saurabh Dahal Resume 2024.pdf" class="button button--ghost">
+              Download CV
+            </a>
+            <a href="#about" class="button">About me</a>
+          </div>
+        </div>
+        <div class="home__handle">
+          <img src="./assets/img/profilePic.png" alt="" class="home__img" />
+        </div>
+        <div class="home__social">
+          <a href="https://www.linkedin.com/in/saurabhdahal/" target="_blank" class="home__social-link">
+            <i class="bx bxl-linkedin-square"></i>
+          </a>
+          <a href="https://github.com/sdahal1" target="_blank" class="home__social-link">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@instructorrob" target="_blank" class="home__social-link">
+            <i class="bx bxl-youtube"></i>
+          </a>
+        </div>
+        <a href="#about" class="home__scroll">
+          <i class="bx bx-mouse home__scroll-icon"></i>
+          <span class="home__scroll-name">Scroll Down</span>
+        </a>
+      </div>
+    </section>
 
-                <div class="about__container container grid">
-                    <img src="./assets/img/rob_teaching.jpeg" alt="" class="about__img" />
-                    <div class="about__data">
-                        <div class="about__info">
-                            <div class="about__box">
-                                <i class="bx bx-award about__icon"></i>
-                                <h3 class="about__title">Experience</h3>
-                                <span class="about__subtitle"
-                                    >6 Years Working</span
-                                >
-                            </div>
-                            <div class="about__box">
-                                <i class="bx bx-briefcase-alt about__icon"></i>
-                                <h3 class="about__title">Completed</h3>
-                                <span class="about__subtitle"
-                                    >48 + Projects</span
-                                >
-                            </div>
-                            <div class="about__box">
-                                <i class="bx bx-support about__icon"></i>
-                                <h3 class="about__title">Support</h3>
-                                <span class="about__subtitle">Online 24/7</span>
-                            </div>
-                        </div>
-                        <p class="about__description">
-                            Full stack developer and software engineering
-                            instructor. I create robust full stack applications
-                            designed to solve various client needs. I also teach
-                            software engineering to adults making a career
-                            change to the tech field. I have years of experience
-                            and many clients are happy with the projects and
-                            instructions provided.
-                        </p>
-                        <a href="#contact" class="button">Contact Me</a>
-                    </div>
-                </div>
-            </section>
+    <!--=============== ABOUT ===============-->
+    <section class="about section" id="about">
+      <span class="section__subtitle">My Intro</span>
+      <h2 class="section__title">About Me</h2>
 
-            <!--=============== SKILLS ===============-->
-            <section class="skills section" id="skills">
-                <span class="section__subtitle">My abilities</span>
-                <h2 class="section__title">My Experience</h2>
-
-                <div class="skills__container container grid">
-                    <div class="skills__content">
-                        <h3 class="skills__title">Frontend Developer</h3>
-                        <div class="skills__box">
-                            <div class="skills__group">
-                                <div class="skills__data">
-                                    <i class="bx bxs-badge-check"></i>
-                                    <div>
-                                        <h3 class="skills__name">HTML</h3>
-                                        <span class="skills__level"
-                                            >6+ years</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <i class="bx bxs-badge-check"></i>
-                                    <div>
-                                        <h3 class="skills__name">CSS</h3>
-                                        <span class="skills__level"
-                                            >6+ years</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <i class="bx bxs-badge-check"></i>
-                                    <div>
-                                        <h3 class="skills__name">Javascript</h3>
-                                        <span class="skills__level"
-                                            >6+ years</span
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skills__group">
-                                <div class="skills__data">
-                                    <i class="bx bxs-badge-check"></i>
-                                    <div>
-                                        <h3 class="skills__name">Bootstrap</h3>
-                                        <span class="skills__level"
-                                            >3+ years</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <i class="bx bxs-badge-check"></i>
-                                    <div>
-                                        <h3 class="skills__name">Git</h3>
-                                        <span class="skills__level"
-                                            >6+ years</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <i class="bx bxs-badge-check"></i>
-                                    <div>
-                                        <h3 class="skills__name">React</h3>
-                                        <span class="skills__level"
-                                            >3+ years</span
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skills__content">
-                        <h3 class="skills__title">Backend Developer</h3>
-                        <div class="skills__box">
-                            <div class="skills__group">
-                                <div class="skills__data">
-                                    <i class="bx bxs-badge-check"></i>
-                                    <div>
-                                        <h3 class="skills__name">Java</h3>
-                                        <span class="skills__level"
-                                            >1 year</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <i class="bx bxs-badge-check"></i>
-                                    <div>
-                                        <h3 class="skills__name">NodeJS</h3>
-                                        <span class="skills__level"
-                                            >6+ years</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <i class="bx bxs-badge-check"></i>
-                                    <div>
-                                        <h3 class="skills__name">Python</h3>
-                                        <span class="skills__level"
-                                            >4+ years</span
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="skills__group">
-                                <div class="skills__data">
-                                    <i class="bx bxs-badge-check"></i>
-                                    <div>
-                                        <h3 class="skills__name">MySQL</h3>
-                                        <span class="skills__level"
-                                            >6+ years</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <i class="bx bxs-badge-check"></i>
-                                    <div>
-                                        <h3 class="skills__name">MongoDB</h3>
-                                        <span class="skills__level"
-                                            >6+ years</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="skills__data">
-                                    <i class="bx bxs-badge-check"></i>
-                                    <div>
-                                        <h3 class="skills__name">Firebase</h3>
-                                        <span class="skills__level"
-                                            >1 year</span
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--=============== SERVICES ===============-->
-            <section class="services section">
-                <span class="section__subtitle">My Services</span>
-                <h2 class="section__title">What I Offer</h2>
-                <div class="services__container container grid">
-                    <div class="services__card">
-                        <h3 class="services__title">
-                            Full Stack <br />
-                            Web Development
-                        </h3>
-                        <span class="services__button">
-                            See more
-                            <i class="bx bx-right-arrow-alt services__icon"></i>
-                        </span>
-                        <div class="services__modal">
-                            <div class="services__modal-content">
-                                <i class="bx bx-x services__modal-close"></i>
-                                <h3 class="services__modal-title">
-                                    Full Stack Web Development
-                                </h3>
-                                <p class="services__modal-description">
-                                    Web developement service with more than 6 years of
-                                    experience. Providing quality work to clients and companies.
-                                </p>
-                                <ul class="services__modal-list">
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            I can build front end, back end, and deploy.
-                                        </p>
-                                    </li>
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            Web page development.
-                                        </p>
-                                    </li>
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            I create ux element interactions.
-                                        </p>
-                                    </li>
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            I position your company brand.
-                                        </p>
-                                    </li>
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            System design for distributed scalable systems
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services__card">
-                        <h3 class="services__title">
-                            Cloud <br />
-                            Engineering
-                        </h3>
-                        <span class="services__button">
-                            See more
-                            <i class="bx bx-right-arrow-alt services__icon"></i>
-                        </span>
-                        <div class="services__modal">
-                            <div class="services__modal-content">
-                                <i class="bx bx-x services__modal-close"></i>
-                                <h3 class="services__modal-title">
-                                    Cloud Engineering
-                                </h3>
-                                <p class="services__modal-description">
-                                    I can set up your companies cloud infrastructure to be scalable, redundant, and fault-tolerant.
-                                </p>
-                                <ul class="services__modal-list">
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            Cloud Infrastructure Automation
-                                        </p>
-                                    </li>
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            Cloud Native Apps
-                                        </p>
-                                    </li>
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            Microservices
-                                        </p>
-                                    </li>
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            CI/CD
-                                        </p>
-                                    </li>
-                                    <!-- <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            Design and mockups of products for
-                                            companies.
-                                        </p>
-                                    </li> -->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="services__card">
-                        <h3 class="services__title">
-                            Web Development <br />
-                            Instruction
-                        </h3>
-                        <span class="services__button">
-                            See more
-                            <i class="bx bx-right-arrow-alt services__icon"></i>
-                        </span>
-                        <div class="services__modal">
-                            <div class="services__modal-content">
-                                <i class="bx bx-x services__modal-close"></i>
-                                <h3 class="services__modal-title">
-                                    Web Development Instruction
-                                </h3>
-                                <p class="services__modal-description">
-                                    Coding Bootcamp instructor with over 5 years of experience training adults for entry level jobs in software development.
-                                </p>
-                                <ul class="services__modal-list">
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            Basics (HTML,CSS,JavaScript)
-                                        </p>
-                                    </li>
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            React + Typescript
-                                        </p>
-                                    </li>
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            Python
-                                        </p>
-                                    </li>
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            SQL
-                                        </p>
-                                    </li>
-                                    <li class="services__modal-item">
-                                        <i
-                                            class="bx bx-check services__modal-icon"
-                                        ></i>
-                                        <p class="services__modal-info">
-                                            MERN Stack
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!--=============== WORK ===============-->
-            <section class="work section" id="work">
-                <span class="section__subtitle">My Portfolio</span>
-                <h2 class="section__title">Recent Works</h2>
-
-                <div class="work__filters">
-                    <span class="work__item active-work" data-filter="all">All</span>
-                    <span class="work__item" data-filter=".web">Frontend</span>
-                    <span class="work__item" data-filter=".mobile">Backend</span>
-                    <span class="work__item" data-filter=".design">Fullstack</span>
-                    <!-- <span class="work__item" data-filter=".design">Fullstack</span> -->
-
-                </div>
-
-                <div class="work__container container grid">
-                    <div class="work__card mix web">
-                        <img
-                            src="./assets/img/cloud.jpeg"
-                            alt=""
-                            class="work__img"
-                        />
-
-                        <h3 class="work__title">Cloud Engineer Portfolio</h3>
-                        <div class="work__overlay">
-                            <h4>Cloud Engineer Portfolio</h4>
-                            <!-- <p>This is a portfolio website for a Cloud Engineer. Its purpose is to help the client showcase their cloud projects, background, and other skills/hobbies that are relevant to their marketing.</p> -->
-                            <a href="https://github.com/sdahal1/Darrell-Humphries-Site" target="_blank" class="work__button">
-                                View Code
-                                <i class='bx bxl-github work__icon'></i>
-                            </a>
-                            <a href="https://sdahal1.github.io/Darrell-Humphries-Site/" target="_blank" class="work__button">
-                                Visit Website
-                                <i class="bx bx-right-arrow-alt work__icon"></i>
-                            </a>
-                        </div>
-                        <div class="work__footer">
-                          <div class="work__footer-tech">
-                            <i class="devicon-html5-plain colored"></i>
-                            <p>HTML5</p>
-                          </div>
-                          <div class="work__footer-tech">
-                            <i class="devicon-css3-plain colored"></i>
-                            <p>CSS3</p>
-                          </div>
-                          <div class="work__footer-tech">
-                            <i class="devicon-javascript-plain colored"></i>
-                            <p>Javascript</p>
-                          </div>
-                          <div class="work__footer-tech">
-                            <i class="devicon-html5-plain colored"></i>
-                            <p>HTML5</p>
-                          </div>
-                          <div class="work__footer-tech">
-                            <i class="devicon-html5-plain colored"></i>
-                            <p>HTML5</p>
-                          </div>
-                          <div class="work__footer-tech">
-                            <i class="devicon-html5-plain colored"></i>
-                            <p>HTML5</p>
-                          </div>
-                          <div class="work__footer-tech">
-                            <i class="devicon-html5-plain colored"></i>
-                            <p>HTML5</p>
-                          </div>
-                          <div class="work__footer-tech">
-                            <i class="devicon-html5-plain colored"></i>
-                            <p>HTML5</p>
-                          </div>
-                          <div class="work__footer-tech">
-                            <i class="devicon-html5-plain colored"></i>
-                            <p>HTML5</p>
-                          </div>
-                          <div class="work__footer-tech">
-                            <i class="devicon-html5-plain colored"></i>
-                            <p>HTML5</p>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="work__card mix mobile">
-                        <img
-                            src="./assets/img/work2.jpg"
-                            alt=""
-                            class="work__img"
-                        />
-
-                        <h3 class="work__title">Mobile</h3>
-                        <a href="#" class="work__button">
-                            Demo
-                            <i class="bx bx-right-arrow-alt work__icon"></i>
-                        </a>
-                    </div>
-                    <div class="work__card mix design">
-                        <img
-                            src="./assets/img/work3.jpg"
-                            alt=""
-                            class="work__img"
-                        />
-
-                        <h3 class="work__title">Brand Design</h3>
-                        <a href="#" class="work__button">
-                            Demo
-                            <i class="bx bx-right-arrow-alt work__icon"></i>
-                        </a>
-                    </div>
-                    <div class="work__card mix web">
-                        <img
-                            src="./assets/img/work4.jpg"
-                            alt=""
-                            class="work__img"
-                        />
-
-                        <h3 class="work__title">Web Design</h3>
-                        <a href="#" class="work__button">
-                            Demo
-                            <i class="bx bx-right-arrow-alt work__icon"></i>
-                        </a>
-                    </div>
-                    <div class="work__card mix mobile">
-                        <img
-                            src="./assets/img/work5.jpg"
-                            alt=""
-                            class="work__img"
-                        />
-
-                        <h3 class="work__title">App Movil</h3>
-                        <a href="#" class="work__button">
-                            Demo
-                            <i class="bx bx-right-arrow-alt work__icon"></i>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!--=============== TESTIMONIALS ===============-->
-            <section class="testimonial section" id="testimonial">
-                <span class="section__subtitle">My clients say</span>
-                <h2 class="section__title">Testimonial</h2>
-                <div class="testimonial__container container swiper">
-                    <div class="swiper-wrapper">
-                        <div class="testimonial__card swiper-slide">
-                            <div class="testimonial__card__header">
-                                <img
-                                    src="./assets/img/testimonial1.jpeg"
-                                    alt=""
-                                    class="testimonial__img"
-                                />
-                                <i>Full Stack Software Engineer</i>
-                            </div>
-                            <h3 class="testimonial__name">Katya Sarmiento</h3>
-                            
-                            <p class="testimonial__description">
-                                Rob, or Saurabh Dahal, has been an extraordinary instructor during my time in the Thinkful Software Engineering Immersion. His engaging teaching style and commitment to student success made every session lively and memorable, even for someone like me who typically struggles with memory and retention. Rob's ability to simplify complicated ideas through relatable analogies and real-world examples played a crucial role in helping me grasp and remember the material.
-
-                                Rob's dedication to ensuring the success of his students is truly remarkable. He consistently went the extra mile, hosting additional workshops, extending sessions to answer questions, and even creating video tutorials during his personal time. His passion for teaching and genuine care for his students' well-being were evident in every interaction, making the learning experience truly enriching and enjoyable.
-
-                                Beyond his professional expertise, Rob's warm and humble nature, coupled with his unwavering encouragement and support, made him a pleasure to learn from. His cheerleading and uplifting attitude always left me feeling inspired and excited to attend his workshops. I am immensely grateful to have had the opportunity to learn from Rob and can confidently say that his guidance has had a lasting impact on both my personal and professional growth.
-                            </p>
-                        </div>
-                        <div class="testimonial__card swiper-slide">
-                            <div class="testimonial__card__header">
-                                <img
-                                    src="./assets/img/testimonial2.jpeg"
-                                    alt=""
-                                    class="testimonial__img"
-                                />
-                                <i>Software Engineer @ Source Allies</i>
-                            </div>
-                            <h3 class="testimonial__name">Aaron Nguyen</h3>
-                            <p class="testimonial__description">
-                                I had the absolute pleasure of being Saurabh's during the MERN portion of my full-stack course from Coding Dojo. I was extremely fortunate enough to have been his student, as his ability to break down concepts, kindness, positive attitude, and extraordinary lecturing skills had allowed me to excel and exceed my own expectations from our time together. I would on average report to Saurabh multiple times a week for a code review to make sure I was able to understand the learning material, with each time learning a new skill or given extra material to look over for the next review we would have scheduled. Speaking to other students at the Dojo, it was safe to say that Saurabh had definitely put a stamp in our careers as the instructor who had kept us engaged and transformed our way of thought as future-developers.
-
-                                Additionally, Saurabh had gone further and beyond by consistently checking in with me while I had been working on my assignments, making sure I was able to understand the material deeply, while also giving me the opportunity to enhance my leadership skills when he had asked me to help fellow students. Furthermore on top of the curriculum, he had also given supplementary resources for data structures, algorithms, and the future job search. These opportunities that Saurabh had helped me and other students develop are what he would call "the bag", as the bag is filled with an endless amount of future possibilities and endeavors.
-                                
-                                I am forever grateful that Saurabh was my instructor, as he had given me more than enough support to succeed and excel in my future careers.
-                            </p>
-                        </div>
-                        <div class="testimonial__card swiper-slide">
-                            <div class="testimonial__card__header">
-                                <img
-                                    src="./assets/img/testimonial3.jpeg"
-                                    alt=""
-                                    class="testimonial__img"
-                                />
-                                <i>Developer I</i>
-                            </div>
-                            <h3 class="testimonial__name">Justin Lemmons</h3>
-                            <p class="testimonial__description">
-                                Saurabh, was my instructor for my MERN course. He has a profound ability to identify the nuances in programming that cause frustration for people new to the industry. Like myself, I was someone who had struggled as literally everything I learned was brand new for me. But, Saurabh was able to communicate at a level that I could clearly make sense of what he was saying while seeing the big picture and how to conceptually understand why we did it. To conclude, he is a top notch instructor.
-                            </p>
-                        </div>
-                        <div class="testimonial__card swiper-slide">
-                            <div class="testimonial__card__header">
-                                <img
-                                    src="./assets/img/testimonial4.jpeg"
-                                    alt=""
-                                    class="testimonial__img"
-                                />
-                                <i>IT System Administrator</i>
-                            </div>
-                            <h3 class="testimonial__name">David Bass</h3>
-                            <p class="testimonial__description">
-                                Saurabh was one of the most inspiring, knowledgeable instructor I have ever had. I was fortunate to have him as my instructor in both Java and MERN. He taught us the subject matter in a fun, digestible, and in a way I have never seen before. I loved how he would say, let's break this down into baby steps. It was a much more clear and precise way of learning. I am a better developer because of Saurabh, and I look to him as a role model.
-                            </p>
-                        </div>
-                        <div class="testimonial__card swiper-slide">
-                            <div class="testimonial__card__header">
-                                <img
-                                    src="./assets/img/testimonial5.jpeg"
-                                    alt=""
-                                    class="testimonial__img"
-                                />
-                                <i>Software Engineer at HiOperator</i>
-                            </div>
-                            <h3 class="testimonial__name">Bekrija Dervisevic</h3>
-                            <p class="testimonial__description">
-                                What more can I say about this man that already hasn't been said? His communication skills are uncanny. Paired with his expert knowledge of Python and Django/Flask frameworks, this guy can teach like none other. The way he breaks down comprehensive material and makes it all so real and relatable is outstanding. He leaves no man or woman behind, always taking care of others first. There wasn't a single question that I or any cohorts could think of that Rob couldn't solve and explain with ease. He is a master of his trade. I feel extremely lucky to have had such a wise mentor, it was a true blessing I'll never forget.
-                            </p>
-                        </div>
-                        
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </section>
-
-            <!--=============== CONTACT ===============-->
-            <section class="contact section" id="contact">
-                <span class="section__subtitle">Get in touch</span>
-                <h2 class="section__title">Contact Me</h2>
-
-                <div class="contact__container container grid">
-                    <div class="contact__content">
-                        <h3 class="contact__title">Talk to me</h3>
-                        <div class="contact__info">
-                            <div class="contact__card">
-                                <i class='bx bx-mail-send contact__card-icon' ></i>
-                                <h3 class="contact__card-title">Email</h3>
-                                <span class="contact__card-data">sdahal1@yahoo.com</span>
-                                <a href="mailto:sdahal1@yahoo.com" target="_blank" class="contact__button">
-                                    Write me <i class='bx bx-right-arrow-alt contact__button-icon' ></i>
-                                </a>
-                            </div>
-
-                            <div class="contact__card">
-                                <i class='bx bx-phone contact__card-icon' ></i>
-                                <h3 class="contact__card-title">Phone</h3>
-                                <span class="contact__card-data">7036064139</span>
-                                <a href="" target="_blank" class="contact__button">
-                                    Write me <i class='bx bx-right-arrow-alt contact__button-icon' ></i>
-                                </a>
-                            </div>
-
-                            <div class="contact__card">
-                                <i class='bx bx-chat contact__card-icon' ></i>
-                                <h3 class="contact__card-title">Messenger</h3>
-                                <span class="contact__card-data">user@fb123</span>
-                                <a href="https://m.me/RobDahal" target="_blank" class="contact__button">
-                                    Write me <i class='bx bx-right-arrow-alt contact__button-icon' ></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact__content">
-                        <h3 class="contact__title">Write me your Inquiry</h3>
-                        <form action="" class="contact__form" id="contact-form">
-                            <div class="contact__form-div">
-                                <label for="name_input" class="contact__form-tag">Names</label>
-                                <input type="text" placeholder="Insert your name" class="contact__form-input" id="name_input" name="user_name">
-                            </div>
-
-                            <div class="contact__form-div">
-                                <label for="email_input" class="contact__form-tag">Mail</label>
-                                <input type="email" placeholder = "Insert your email" class="contact__form-input" id="email_input" name="user_email">
-                            </div>
-
-                            <div class="contact__form-div contact__form-area">
-                                <label for="message_input" class="contact__form-tag">Message</label>
-                                <textarea cols="30" rows="10" class="contact__form-input" placeholder="Write me your inquiry" id="message_input" name="user_message"></textarea>
-                            </div>
-                            <button class="button">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!--=============== FOOTER ===============-->
-        <footer class="footer">
-            <div class="footer__container container">
-                <h1 class="footer__title">Saurabh Dahal</h1>
-
-                <ul class="footer__list">
-                    <li>
-                        <a href="#about" class="footer__link">About</a>
-                    </li>
-                    <li>
-                        <a href="#work" class="footer__link">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#testimonial" class="footer__link">Testimonial</a>
-                    </li>
-                </ul>
-
-                <ul class="footer__social">
-                    <a href="https://www.linkedin.com/in/saurabhdahal/" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-linkedin-square' ></i>
-                    </a>
-                    <a href="https://github.com/sdahal1" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-github'></i>
-                    </a>
-                    <a href="https://www.youtube.com/@instructorrob" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-youtube' ></i>
-                    </a>
-                </ul>
-                <span class="footer__copy">
-                    &#169; Saurabh Dahal. All rights reserved
-                </span>
+      <div class="about__container container grid">
+        <img src="./assets/img/rob_teaching.jpeg" alt="" class="about__img" />
+        <div class="about__data">
+          <div class="about__info">
+            <div class="about__box">
+              <i class="bx bx-award about__icon"></i>
+              <h3 class="about__title">Experience</h3>
+              <span class="about__subtitle">6 Years Working</span>
             </div>
-        </footer>
+            <div class="about__box">
+              <i class="bx bx-briefcase-alt about__icon"></i>
+              <h3 class="about__title">Completed</h3>
+              <span class="about__subtitle">48 + Projects</span>
+            </div>
+            <div class="about__box">
+              <i class="bx bx-support about__icon"></i>
+              <h3 class="about__title">Support</h3>
+              <span class="about__subtitle">Online 24/7</span>
+            </div>
+          </div>
+          <p class="about__description">
+            Full stack developer and software engineering
+            instructor. I create robust full stack applications
+            designed to solve various client needs. I also teach
+            software engineering to adults making a career
+            change to the tech field. I have years of experience
+            and many clients are happy with the projects and
+            instructions provided.
+          </p>
+          <a href="#contact" class="button">Contact Me</a>
+        </div>
+      </div>
+    </section>
 
-        <!--=============== SCROLLREVEAL ===============-->
-        <script src="./assets/js/scrollreveal.min.js"></script>
+    <!--=============== SKILLS ===============-->
+    <section class="skills section" id="skills">
+      <span class="section__subtitle">My abilities</span>
+      <h2 class="section__title">My Experience</h2>
 
-        <!--=============== SWIPER JS ===============-->
-        <script src="./assets/js/swiper-bundle.min.js"></script>
+      <div class="skills__container container grid">
+        <div class="skills__content">
+          <h3 class="skills__title">Frontend Developer</h3>
+          <div class="skills__box">
+            <div class="skills__group">
+              <div class="skills__data">
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">HTML</h3>
+                  <span class="skills__level">6+ years</span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">CSS</h3>
+                  <span class="skills__level">6+ years</span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">Javascript</h3>
+                  <span class="skills__level">6+ years</span>
+                </div>
+              </div>
+            </div>
 
-        <!--=============== MIXITUP FILTER ===============-->
-        <script src="./assets/js/mixitup.min.js"></script>
+            <div class="skills__group">
+              <div class="skills__data">
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">Bootstrap</h3>
+                  <span class="skills__level">3+ years</span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">Git</h3>
+                  <span class="skills__level">6+ years</span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">React</h3>
+                  <span class="skills__level">3+ years</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skills__content">
+          <h3 class="skills__title">Backend Developer</h3>
+          <div class="skills__box">
+            <div class="skills__group">
+              <div class="skills__data">
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">Java</h3>
+                  <span class="skills__level">1 year</span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">NodeJS</h3>
+                  <span class="skills__level">6+ years</span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">Python</h3>
+                  <span class="skills__level">4+ years</span>
+                </div>
+              </div>
+            </div>
 
-        <!--=============== MAIN JS ===============-->
-        <script src="./assets/js/main.js"></script>
-    </body>
+            <div class="skills__group">
+              <div class="skills__data">
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">MySQL</h3>
+                  <span class="skills__level">6+ years</span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">MongoDB</h3>
+                  <span class="skills__level">6+ years</span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <i class="bx bxs-badge-check"></i>
+                <div>
+                  <h3 class="skills__name">Firebase</h3>
+                  <span class="skills__level">1 year</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== SERVICES ===============-->
+    <section class="services section">
+      <span class="section__subtitle">My Services</span>
+      <h2 class="section__title">What I Offer</h2>
+      <div class="services__container container grid">
+        <div class="services__card">
+          <h3 class="services__title">
+            Full Stack <br />
+            Web Development
+          </h3>
+          <span class="services__button">
+            See more
+            <i class="bx bx-right-arrow-alt services__icon"></i>
+          </span>
+          <div class="services__modal">
+            <div class="services__modal-content">
+              <i class="bx bx-x services__modal-close"></i>
+              <h3 class="services__modal-title">
+                Full Stack Web Development
+              </h3>
+              <p class="services__modal-description">
+                Web developement service with more than 6 years of
+                experience. Providing quality work to clients and companies.
+              </p>
+              <ul class="services__modal-list">
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    I can build front end, back end, and deploy.
+                  </p>
+                </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    Web page development.
+                  </p>
+                </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    I create ux element interactions.
+                  </p>
+                </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    I position your company brand.
+                  </p>
+                </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    System design for distributed scalable systems
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="services__card">
+          <h3 class="services__title">
+            Cloud <br />
+            Engineering
+          </h3>
+          <span class="services__button">
+            See more
+            <i class="bx bx-right-arrow-alt services__icon"></i>
+          </span>
+          <div class="services__modal">
+            <div class="services__modal-content">
+              <i class="bx bx-x services__modal-close"></i>
+              <h3 class="services__modal-title">
+                Cloud Engineering
+              </h3>
+              <p class="services__modal-description">
+                I can set up your companies cloud infrastructure to be scalable, redundant, and fault-tolerant.
+              </p>
+              <ul class="services__modal-list">
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    Cloud Infrastructure Automation
+                  </p>
+                </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    Cloud Native Apps
+                  </p>
+                </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    Microservices
+                  </p>
+                </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    CI/CD
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="services__card">
+          <h3 class="services__title">
+            Web Development <br />
+            Instruction
+          </h3>
+          <span class="services__button">
+            See more
+            <i class="bx bx-right-arrow-alt services__icon"></i>
+          </span>
+          <div class="services__modal">
+            <div class="services__modal-content">
+              <i class="bx bx-x services__modal-close"></i>
+              <h3 class="services__modal-title">
+                Web Development Instruction
+              </h3>
+              <p class="services__modal-description">
+                Coding Bootcamp instructor with over 5 years of experience training adults for entry level jobs in
+                software development.
+              </p>
+              <ul class="services__modal-list">
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    Basics (HTML,CSS,JavaScript)
+                  </p>
+                </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    React + Typescript
+                  </p>
+                </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    Python
+                  </p>
+                </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    SQL
+                  </p>
+                </li>
+                <li class="services__modal-item">
+                  <i class="bx bx-check services__modal-icon"></i>
+                  <p class="services__modal-info">
+                    MERN Stack
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== WORK ===============-->
+    <section class="work section" id="work">
+      <span class="section__subtitle">My Portfolio</span>
+      <h2 class="section__title">Recent Works</h2>
+
+      <div class="work__filters">
+        <span class="work__item active-work" data-filter="all">All</span>
+        <span class="work__item" data-filter=".web">Frontend</span>
+        <span class="work__item" data-filter=".mobile">Backend</span>
+        <span class="work__item" data-filter=".design">Fullstack</span>
+        <!-- <span class="work__item" data-filter=".design">Fullstack</span> -->
+
+      </div>
+
+      <div class="work__container container grid">
+        <div class="work__card mix web">
+          <img src="./assets/img/cloud.jpeg" alt="" class="work__img" />
+
+          <h3 class="work__title">Cloud Engineer Portfolio</h3>
+          <div class="work__overlay">
+            <h4>Cloud Engineer Portfolio</h4>
+            <a href="https://github.com/sdahal1/Darrell-Humphries-Site" target="_blank" class="work__button">
+              View Code
+              <i class='bx bxl-github work__icon'></i>
+            </a>
+            <a href="https://sdahal1.github.io/Darrell-Humphries-Site/" target="_blank" class="work__button">
+              Visit Website
+              <i class="bx bx-right-arrow-alt work__icon"></i>
+            </a>
+            <span class="work__button work__button-modal">
+              More Info
+              <i class="bx bx-right-arrow-alt work__icon"></i>
+            </span>
+          </div>
+          <div class="work__footer">
+            <div class="work__footer-tech">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML5</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-css3-plain colored"></i>
+              <p>CSS3</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-javascript-plain colored"></i>
+              <p>Javascript</p>
+            </div>
+          </div>
+          <div class="work__modal">
+            <div class="work__modal-content">
+              <i class="bx bx-x work__modal-close"></i>
+              <h3 class="work__modal-title">
+                Cloud Engineer Portfolio
+              </h3>
+              <p class="work__modal-description">
+                This is a frontend portfolio website for a Cloud Engineer. Its purpose is to help the client showcase their cloud projects, background, and other skills/hobbies that are relevant to their marketing. It also provides a way to submit inquiries to the client which gets routed to their email.
+              </p>
+              <p class="work__modal-tech-info">
+                Technology: HTML, CSS, JS, EmailJS, SwiperJS
+              </p>
+              <ul class="work__modal-list">
+                <li class="work__modal-item">
+                  <i class="bx bx-check work__modal-icon"></i>
+                  <p class="work__modal-info">
+                    Fully responsive on all devices
+                  </p>
+                </li>
+                <li class="work__modal-item">
+                  <i class="bx bx-check work__modal-icon"></i>
+                  <p class="work__modal-info">
+                    Light mode/Dark mode
+                  </p>
+                </li>
+                <li class="work__modal-item">
+                  <i class="bx bx-check work__modal-icon"></i>
+                  <p class="work__modal-info">
+                    Email communications feature
+                  </p>
+                </li>
+                <li class="work__modal-item">
+                  <i class="bx bx-check work__modal-icon"></i>
+                  <p class="work__modal-info">
+                    Swiper based testimonials and filtering options
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="work__card mix web">
+          <img src="./assets/img/developer.jpeg" alt="" class="work__img" />
+
+          <h3 class="work__title">Software Developer Portfolio</h3>
+          <div class="work__overlay">
+            <h4>Software Developer Portfolio</h4>
+            <!-- <p>This is a portfolio website for a Cloud Engineer. Its purpose is to help the client showcase their cloud projects, background, and other skills/hobbies that are relevant to their marketing.</p> -->
+            <a href="https://github.com/sdahal1/SamplePortfolio/" target="_blank" class="work__button">
+              View Code
+              <i class='bx bxl-github work__icon'></i>
+            </a>
+            <a href="https://sdahal1.github.io/SamplePortfolio/" target="_blank" class="work__button">
+              Visit Website
+              <i class="bx bx-right-arrow-alt work__icon"></i>
+            </a>
+            
+          </div>
+          <div class="work__footer">
+            <div class="work__footer-tech">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML5</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-css3-plain colored"></i>
+              <p>CSS3</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-javascript-plain colored"></i>
+              <p>Javascript</p>
+            </div>
+          </div>
+        </div>
+        <div class="work__card mix web">
+          <img src="./assets/img/cloud.jpeg" alt="" class="work__img" />
+
+          <h3 class="work__title">Cloud Engineer Portfolio</h3>
+          <div class="work__overlay">
+            <h4>Cloud Engineer Portfolio</h4>
+            <!-- <p>This is a portfolio website for a Cloud Engineer. Its purpose is to help the client showcase their cloud projects, background, and other skills/hobbies that are relevant to their marketing.</p> -->
+            <a href="https://github.com/sdahal1/Darrell-Humphries-Site" target="_blank" class="work__button">
+              View Code
+              <i class='bx bxl-github work__icon'></i>
+            </a>
+            <a href="https://sdahal1.github.io/Darrell-Humphries-Site/" target="_blank" class="work__button">
+              Visit Website
+              <i class="bx bx-right-arrow-alt work__icon"></i>
+            </a>
+          </div>
+          <div class="work__footer">
+            <div class="work__footer-tech">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML5</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-css3-plain colored"></i>
+              <p>CSS3</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-javascript-plain colored"></i>
+              <p>Javascript</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML5</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML5</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML5</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML5</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML5</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML5</p>
+            </div>
+            <div class="work__footer-tech">
+              <i class="devicon-html5-plain colored"></i>
+              <p>HTML5</p>
+            </div>
+          </div>
+        </div>
+        <div class="work__card mix mobile">
+          <img src="./assets/img/work2.jpg" alt="" class="work__img" />
+
+          <h3 class="work__title">Mobile</h3>
+          <a href="#" class="work__button">
+            Demo
+            <i class="bx bx-right-arrow-alt work__icon"></i>
+          </a>
+        </div>
+        <div class="work__card mix design">
+          <img src="./assets/img/work3.jpg" alt="" class="work__img" />
+
+          <h3 class="work__title">Brand Design</h3>
+          <a href="#" class="work__button">
+            Demo
+            <i class="bx bx-right-arrow-alt work__icon"></i>
+          </a>
+        </div>
+        <div class="work__card mix web">
+          <img src="./assets/img/work4.jpg" alt="" class="work__img" />
+
+          <h3 class="work__title">Web Design</h3>
+          <a href="#" class="work__button">
+            Demo
+            <i class="bx bx-right-arrow-alt work__icon"></i>
+          </a>
+        </div>
+        <div class="work__card mix mobile">
+          <img src="./assets/img/work5.jpg" alt="" class="work__img" />
+
+          <h3 class="work__title">App Movil</h3>
+          <a href="#" class="work__button">
+            Demo
+            <i class="bx bx-right-arrow-alt work__icon"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== TESTIMONIALS ===============-->
+    <section class="testimonial section" id="testimonial">
+      <span class="section__subtitle">My clients say</span>
+      <h2 class="section__title">Testimonial</h2>
+      <div class="testimonial__container container swiper">
+        <div class="swiper-wrapper">
+          <div class="testimonial__card swiper-slide">
+            <div class="testimonial__card__header">
+              <img src="./assets/img/testimonial1.jpeg" alt="" class="testimonial__img" />
+              <i>Full Stack Software Engineer</i>
+            </div>
+            <h3 class="testimonial__name">Katya Sarmiento</h3>
+
+            <p class="testimonial__description">
+              Rob, or Saurabh Dahal, has been an extraordinary instructor during my time in the Thinkful Software
+              Engineering Immersion. His engaging teaching style and commitment to student success made every session
+              lively and memorable, even for someone like me who typically struggles with memory and retention. Rob's
+              ability to simplify complicated ideas through relatable analogies and real-world examples played a crucial
+              role in helping me grasp and remember the material.
+
+              Rob's dedication to ensuring the success of his students is truly remarkable. He consistently went the
+              extra mile, hosting additional workshops, extending sessions to answer questions, and even creating video
+              tutorials during his personal time. His passion for teaching and genuine care for his students' well-being
+              were evident in every interaction, making the learning experience truly enriching and enjoyable.
+
+              Beyond his professional expertise, Rob's warm and humble nature, coupled with his unwavering encouragement
+              and support, made him a pleasure to learn from. His cheerleading and uplifting attitude always left me
+              feeling inspired and excited to attend his workshops. I am immensely grateful to have had the opportunity
+              to learn from Rob and can confidently say that his guidance has had a lasting impact on both my personal
+              and professional growth.
+            </p>
+          </div>
+          <div class="testimonial__card swiper-slide">
+            <div class="testimonial__card__header">
+              <img src="./assets/img/testimonial2.jpeg" alt="" class="testimonial__img" />
+              <i>Software Engineer @ Source Allies</i>
+            </div>
+            <h3 class="testimonial__name">Aaron Nguyen</h3>
+            <p class="testimonial__description">
+              I had the absolute pleasure of being Saurabh's during the MERN portion of my full-stack course from Coding
+              Dojo. I was extremely fortunate enough to have been his student, as his ability to break down concepts,
+              kindness, positive attitude, and extraordinary lecturing skills had allowed me to excel and exceed my own
+              expectations from our time together. I would on average report to Saurabh multiple times a week for a code
+              review to make sure I was able to understand the learning material, with each time learning a new skill or
+              given extra material to look over for the next review we would have scheduled. Speaking to other students
+              at the Dojo, it was safe to say that Saurabh had definitely put a stamp in our careers as the instructor
+              who had kept us engaged and transformed our way of thought as future-developers.
+
+              Additionally, Saurabh had gone further and beyond by consistently checking in with me while I had been
+              working on my assignments, making sure I was able to understand the material deeply, while also giving me
+              the opportunity to enhance my leadership skills when he had asked me to help fellow students. Furthermore
+              on top of the curriculum, he had also given supplementary resources for data structures, algorithms, and
+              the future job search. These opportunities that Saurabh had helped me and other students develop are what
+              he would call "the bag", as the bag is filled with an endless amount of future possibilities and
+              endeavors.
+
+              I am forever grateful that Saurabh was my instructor, as he had given me more than enough support to
+              succeed and excel in my future careers.
+            </p>
+          </div>
+          <div class="testimonial__card swiper-slide">
+            <div class="testimonial__card__header">
+              <img src="./assets/img/testimonial3.jpeg" alt="" class="testimonial__img" />
+              <i>Developer I</i>
+            </div>
+            <h3 class="testimonial__name">Justin Lemmons</h3>
+            <p class="testimonial__description">
+              Saurabh, was my instructor for my MERN course. He has a profound ability to identify the nuances in
+              programming that cause frustration for people new to the industry. Like myself, I was someone who had
+              struggled as literally everything I learned was brand new for me. But, Saurabh was able to communicate at
+              a level that I could clearly make sense of what he was saying while seeing the big picture and how to
+              conceptually understand why we did it. To conclude, he is a top notch instructor.
+            </p>
+          </div>
+          <div class="testimonial__card swiper-slide">
+            <div class="testimonial__card__header">
+              <img src="./assets/img/testimonial4.jpeg" alt="" class="testimonial__img" />
+              <i>IT System Administrator</i>
+            </div>
+            <h3 class="testimonial__name">David Bass</h3>
+            <p class="testimonial__description">
+              Saurabh was one of the most inspiring, knowledgeable instructor I have ever had. I was fortunate to have
+              him as my instructor in both Java and MERN. He taught us the subject matter in a fun, digestible, and in a
+              way I have never seen before. I loved how he would say, let's break this down into baby steps. It was a
+              much more clear and precise way of learning. I am a better developer because of Saurabh, and I look to him
+              as a role model.
+            </p>
+          </div>
+          <div class="testimonial__card swiper-slide">
+            <div class="testimonial__card__header">
+              <img src="./assets/img/testimonial5.jpeg" alt="" class="testimonial__img" />
+              <i>Software Engineer at HiOperator</i>
+            </div>
+            <h3 class="testimonial__name">Bekrija Dervisevic</h3>
+            <p class="testimonial__description">
+              What more can I say about this man that already hasn't been said? His communication skills are uncanny.
+              Paired with his expert knowledge of Python and Django/Flask frameworks, this guy can teach like none
+              other. The way he breaks down comprehensive material and makes it all so real and relatable is
+              outstanding. He leaves no man or woman behind, always taking care of others first. There wasn't a single
+              question that I or any cohorts could think of that Rob couldn't solve and explain with ease. He is a
+              master of his trade. I feel extremely lucky to have had such a wise mentor, it was a true blessing I'll
+              never forget.
+            </p>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!--=============== CONTACT ===============-->
+    <section class="contact section" id="contact">
+      <span class="section__subtitle">Get in touch</span>
+      <h2 class="section__title">Contact Me</h2>
+
+      <div class="contact__container container grid">
+        <div class="contact__content">
+          <h3 class="contact__title">Talk to me</h3>
+          <div class="contact__info">
+            <div class="contact__card">
+              <i class='bx bx-mail-send contact__card-icon'></i>
+              <h3 class="contact__card-title">Email</h3>
+              <span class="contact__card-data">sdahal1@yahoo.com</span>
+              <a href="mailto:sdahal1@yahoo.com" target="_blank" class="contact__button">
+                Write me <i class='bx bx-right-arrow-alt contact__button-icon'></i>
+              </a>
+            </div>
+
+            <div class="contact__card">
+              <i class='bx bx-phone contact__card-icon'></i>
+              <h3 class="contact__card-title">Phone</h3>
+              <span class="contact__card-data">7036064139</span>
+              <a href="" target="_blank" class="contact__button">
+                Write me <i class='bx bx-right-arrow-alt contact__button-icon'></i>
+              </a>
+            </div>
+
+            <div class="contact__card">
+              <i class='bx bx-chat contact__card-icon'></i>
+              <h3 class="contact__card-title">Messenger</h3>
+              <span class="contact__card-data">user@fb123</span>
+              <a href="https://m.me/RobDahal" target="_blank" class="contact__button">
+                Write me <i class='bx bx-right-arrow-alt contact__button-icon'></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact__content">
+          <h3 class="contact__title">Write me your Inquiry</h3>
+          <form action="" class="contact__form" id="contact-form">
+            <div class="contact__form-div">
+              <label for="name_input" class="contact__form-tag">Names</label>
+              <input type="text" placeholder="Insert your name" class="contact__form-input" id="name_input"
+                name="user_name">
+            </div>
+
+            <div class="contact__form-div">
+              <label for="email_input" class="contact__form-tag">Mail</label>
+              <input type="email" placeholder="Insert your email" class="contact__form-input" id="email_input"
+                name="user_email">
+            </div>
+
+            <div class="contact__form-div contact__form-area">
+              <label for="message_input" class="contact__form-tag">Message</label>
+              <textarea cols="30" rows="10" class="contact__form-input" placeholder="Write me your inquiry"
+                id="message_input" name="user_message"></textarea>
+            </div>
+            <button class="button">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--=============== FOOTER ===============-->
+  <footer class="footer">
+    <div class="footer__container container">
+      <h1 class="footer__title">Saurabh Dahal</h1>
+
+      <ul class="footer__list">
+        <li>
+          <a href="#about" class="footer__link">About</a>
+        </li>
+        <li>
+          <a href="#work" class="footer__link">Projects</a>
+        </li>
+        <li>
+          <a href="#testimonial" class="footer__link">Testimonial</a>
+        </li>
+      </ul>
+
+      <ul class="footer__social">
+        <a href="https://www.linkedin.com/in/saurabhdahal/" target="_blank" class="footer__social-link">
+          <i class='bx bxl-linkedin-square'></i>
+        </a>
+        <a href="https://github.com/sdahal1" target="_blank" class="footer__social-link">
+          <i class='bx bxl-github'></i>
+        </a>
+        <a href="https://www.youtube.com/@instructorrob" target="_blank" class="footer__social-link">
+          <i class='bx bxl-youtube'></i>
+        </a>
+      </ul>
+      <span class="footer__copy">
+        &#169; Saurabh Dahal. All rights reserved
+      </span>
+    </div>
+  </footer>
+
+  <!--=============== SCROLLREVEAL ===============-->
+  <script src="./assets/js/scrollreveal.min.js"></script>
+
+  <!--=============== SWIPER JS ===============-->
+  <script src="./assets/js/swiper-bundle.min.js"></script>
+
+  <!--=============== MIXITUP FILTER ===============-->
+  <script src="./assets/js/mixitup.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="./assets/js/main.js"></script>
+</body>
+
 </html>
