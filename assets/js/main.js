@@ -1,6 +1,22 @@
 /*=============== LOAD PORTFOLIO CONTENT ===============*/
 const portfolio = [
   {
+    title: "FinnaTrack",
+    type: "web fullstack",
+    image: "finnatrack.jpeg",
+    codeUrl: "https://github.com/sdahal1/MERN_finance_tracker_backend",
+    websiteUrl: "https://mern-finance-tracker-frontend.vercel.app/",
+    description: "Fullstack MERN finance tracking application. Uses JWT and cookies for Auth. Renders beautiful charts based on users expenses. Allows for routing, expenses history, expenses input, search, filter, and sort through different dates, categories, and more. Full CRUD functionality. Utilizes MongoDB for persistent storage. NOTE: Currently this application only works on firefox!",
+    technology: ["HTML", "CSS", "JS", "EmailJS", "SwiperJS"],
+    features: [
+      "Fully responsive on all devices",
+      "Personal user accounts",
+      "Create, view, monitor, update, and delete expenses",
+      "Search and sort through expenses based on multiple parameters such as date, month, category, etc",
+      "Sophisticated charts and graphs to visualize spending"
+    ]
+  },
+  {
     title: "Cloud Engineer Portfolio",
     type: "web frontend",
     image: "cloud.jpeg",
@@ -29,26 +45,11 @@ const portfolio = [
       "Email communications feature",
       "Swiper based testimonials and filtering options"
     ]
-  },
-  {
-    title: "FinnaTrack",
-    type: "web fullstack",
-    image: "finnatrack.jpeg",
-    codeUrl: "https://github.com/sdahal1/MERN_finance_tracker_backend",
-    websiteUrl: "https://mern-finance-tracker-frontend.vercel.app/",
-    description: "Fullstack MERN finance tracking application. Uses JWT and cookies for Auth. Renders beautiful charts based on users expenses. Allows for routing, expenses history, expenses input, search, filter, and sort through different dates, categories, and more. Full CRUD functionality. Utilizes MongoDB for persistent storage. NOTE: Currently this application only works on firefox!",
-    technology: ["HTML", "CSS", "JS", "EmailJS", "SwiperJS"],
-    features: [
-      "Fully responsive on all devices",
-      "Personal user accounts",
-      "Create, view, monitor, update, and delete expenses",
-      "Search and sort through expenses based on multiple parameters such as date, month, category, etc",
-      "Sophisticated charts and graphs to visualize spending"
-    ]
   }
+  
 ]
 
-function generateWorkCard({title='', type='', image='', codeUrl='', websiteUrl='', description='', technology=[], features=[]}){
+function generateWorkCard({ title = '', type = '', image = '', codeUrl = '', websiteUrl = '', description = '', technology = [], features = [] }) {
   const workCardHtml = `<div class="work__card mix ${type}">
   <img src="./assets/img/${image}" alt="" class="work__img" />
 
@@ -95,30 +96,7 @@ function generateWorkCard({title='', type='', image='', codeUrl='', websiteUrl='
         Technology: ${technology.join(", ")}
       </p>
       <ul class="work__modal-list">
-        <li class="work__modal-item">
-          <i class="bx bx-check work__modal-icon"></i>
-          <p class="work__modal-info">
-            Fully responsive on all devices
-          </p>
-        </li>
-        <li class="work__modal-item">
-          <i class="bx bx-check work__modal-icon"></i>
-          <p class="work__modal-info">
-            Light mode/Dark mode
-          </p>
-        </li>
-        <li class="work__modal-item">
-          <i class="bx bx-check work__modal-icon"></i>
-          <p class="work__modal-info">
-            Email communications feature
-          </p>
-        </li>
-        <li class="work__modal-item">
-          <i class="bx bx-check work__modal-icon"></i>
-          <p class="work__modal-info">
-            Swiper based testimonials and filtering options
-          </p>
-        </li>
+       ${generateFeatureList(features)}
       </ul>
     </div>
   </div>
@@ -126,12 +104,27 @@ function generateWorkCard({title='', type='', image='', codeUrl='', websiteUrl='
   return workCardHtml;
 }
 
-function loadupWorkContainer(){
+function generateFeatureList(features = []) {
+  let listItems = ''
+  features.forEach(feature=>{
+    const featureItem = ` <li class="work__modal-item">
+      <i class="bx bx-check work__modal-icon"></i>
+      <p class="work__modal-info">
+        ${feature}
+      </p>
+    </li>`
+    listItems+= featureItem;
+  })
+  return listItems
+
+}
+
+function loadupWorkContainer() {
   const workContainer = document.querySelector(".work__container");
-  workContainer.innerHTML=""
-  portfolio.forEach(project=>{
+  workContainer.innerHTML = ""
+  portfolio.forEach(project => {
     const workCard = generateWorkCard(project);
-    workContainer.innerHTML+= workCard;
+    workContainer.innerHTML += workCard;
   })
 }
 
@@ -141,40 +134,35 @@ loadupWorkContainer()
 
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
-function scrollHeader(){
-    const header = document.getElementById('header');
-    //When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
+function scrollHeader() {
+  const header = document.getElementById('header');
+  //When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
+  if (this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header');
 }
 
 window.addEventListener('scroll', scrollHeader);
 
 /*=============== SERVICES MODAL ===============*/
 const modalViews = document.querySelectorAll(".services__modal"),
-    modalBtns = document.querySelectorAll(".services__button"),
-    modalClose = document.querySelectorAll(".services__modal-close");
+  modalBtns = document.querySelectorAll(".services__button"),
+  modalClose = document.querySelectorAll(".services__modal-close");
 
-let modal = function(modalClick){
-    modalViews[modalClick].classList.add('active-modal')
+let modal = function (modalClick) {
+  modalViews[modalClick].classList.add('active-modal')
 }
 
-modalBtns.forEach((mb,i)=>{
-    mb.addEventListener("click", ()=>{
-        modal(i)
-    })
+modalBtns.forEach((mb, i) => {
+  mb.addEventListener("click", () => {
+    modal(i)
+  })
 })
 
-// modalClose.forEach((mc,i)=>{
-//     mc.addEventListener("click", ()=>{
-//         modalViews[i].classList.remove("active-modal");
-//     })
-// })
-modalClose.forEach((mc,i)=>{
-    mc.addEventListener("click", ()=>{
-        modalViews.forEach(mv=>{
-            mv.classList.remove("active-modal");
-        })
+modalClose.forEach((mc, i) => {
+  mc.addEventListener("click", () => {
+    modalViews.forEach(mv => {
+      mv.classList.remove("active-modal");
     })
+  })
 })
 
 
@@ -183,95 +171,95 @@ const workModalViews = document.querySelectorAll(".work__modal"),
   workModalBtns = document.querySelectorAll(".work__button-modal"),
   workModalClose = document.querySelectorAll(".work__modal-close")
 
-let workModal = function(modalClick){
-    workModalViews[modalClick].classList.add('active-modal')
+let workModal = function (modalClick) {
+  workModalViews[modalClick].classList.add('active-modal')
 }
 
-workModalBtns.forEach((mb,i)=>{
-  mb.addEventListener("click", ()=>{
-      workModal(i)
+workModalBtns.forEach((mb, i) => {
+  mb.addEventListener("click", () => {
+    workModal(i)
   })
 })
 
-workModalClose.forEach((mc,i)=>{
-  mc.addEventListener("click", ()=>{
-      workModalViews.forEach(mv=>{
-          mv.classList.remove("active-modal");
-      })
+workModalClose.forEach((mc, i) => {
+  mc.addEventListener("click", () => {
+    workModalViews.forEach(mv => {
+      mv.classList.remove("active-modal");
+    })
   })
 })
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 let mixerPortfolio = mixitup('.work__container', {
-    selectors: {
-        target: '.work__card'
-    },
-    animation: {
-        duration: 300
-    }
+  selectors: {
+    target: '.work__card'
+  },
+  animation: {
+    duration: 300
+  }
 });
 
-/* Link active work */ 
+/* Link active work */
 const linkWork = document.querySelectorAll('.work__item');
 
-function activeWork(e){
-    console.log("this", this)
-    linkWork.forEach((l)=>{
-        l.classList.remove('active-work')
-    });
-    this.classList.add('active-work');
-    // e.target.classList.add('active-work');
+function activeWork(e) {
+  console.log("this", this)
+  linkWork.forEach((l) => {
+    l.classList.remove('active-work')
+  });
+  this.classList.add('active-work');
+  // e.target.classList.add('active-work');
 }
 
-linkWork.forEach(l=>l.addEventListener('click',activeWork))
+linkWork.forEach(l => l.addEventListener('click', activeWork))
 
 /*=============== SWIPER TESTIMONIAL ===============*/
 let swiperTestimonial = new Swiper(".testimonial__container", {
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+  spaceBetween: 24,
+  loop: true,
+  grabCursor: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 48,
-        },
-        // 1024: {
-        //     slidesPerView: 5,
-        //     spaceBetween: 50,
-        // },
-    }
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 48,
+    },
+    // 1024: {
+    //     slidesPerView: 5,
+    //     spaceBetween: 50,
+    // },
+  }
 })
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
-    
-const scrollActive = () =>{
-  	const scrollDown = window.scrollY
 
-	sections.forEach(current =>{
-		const sectionHeight = current.offsetHeight,
-			  sectionTop = current.offsetTop - 58,
-			  sectionId = current.getAttribute('id'),
-			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-        // console.log("********", sectionsClass);
-		if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-			sectionsClass.classList.add('active-link')
-		}else{
-			sectionsClass.classList.remove('active-link')
-		}                                                    
-	})
+const scrollActive = () => {
+  const scrollDown = window.scrollY
+
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight,
+      sectionTop = current.offsetTop - 58,
+      sectionId = current.getAttribute('id'),
+      sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+    // console.log("********", sectionsClass);
+    if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+      sectionsClass.classList.add('active-link')
+    } else {
+      sectionsClass.classList.remove('active-link')
+    }
+  })
 }
 window.addEventListener('scroll', scrollActive)
 
-/*=============== LIGHT DARK THEME ===============*/ 
+/*=============== LIGHT DARK THEME ===============*/
 const themeButton = document.getElementById('theme-button');
 const lightTheme = 'light-theme';
 // const darkTheme = 'dark-theme';
@@ -293,46 +281,46 @@ if (selectedTheme) {
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
-    // Add or remove the light / icon theme
-    document.body.classList.toggle(lightTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
+  // Add or remove the light / icon theme
+  document.body.classList.toggle(lightTheme)
+  themeButton.classList.toggle(iconTheme)
+  // We save the theme and the current icon that the user chose
+  localStorage.setItem('selected-theme', getCurrentTheme())
+  localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2500,
-    delay: 400,
-    // reset: true,
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+  // reset: true,
 })
 
 sr.reveal(`.home__data`)
-sr.reveal(`.home__handle`, {delay: 700})
-sr.reveal(`.home__social, .home__scroll`, {delay: 900, origin: 'bottom'})
+sr.reveal(`.home__handle`, { delay: 700 })
+sr.reveal(`.home__social, .home__scroll`, { delay: 900, origin: 'bottom' })
 
 
 /*=============== EMAIL JS ===============*/
 emailjs.init('njr5lxe7yQZHyiPaV')
 
-window.onload = function() {
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        // console.log("submitted form");
-        event.preventDefault();
-        // generate a five digit number for the contact_number variable
-        // this.contact_number.value = Math.random() * 100000 | 0;
-        // these IDs from the previous steps
-        emailjs.sendForm('service_8de57m5','template_u9cjkbk', '#contact-form', 'njr5lxe7yQZHyiPaV')
-            .then(function() {
-                console.log('SUCCESS!');
-                document.getElementById('contact-form').reset();
-            }, function(error) {
-                console.log('FAILED...', error);
-            });
-    });
+window.onload = function () {
+  document.getElementById('contact-form').addEventListener('submit', function (event) {
+    // console.log("submitted form");
+    event.preventDefault();
+    // generate a five digit number for the contact_number variable
+    // this.contact_number.value = Math.random() * 100000 | 0;
+    // these IDs from the previous steps
+    emailjs.sendForm('service_8de57m5', 'template_u9cjkbk', '#contact-form', 'njr5lxe7yQZHyiPaV')
+      .then(function () {
+        console.log('SUCCESS!');
+        document.getElementById('contact-form').reset();
+      }, function (error) {
+        console.log('FAILED...', error);
+      });
+  });
 }
 
 
