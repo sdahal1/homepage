@@ -203,6 +203,10 @@ body.light-theme{
   box-shadow: 0 2px 16px hsla(var(--second-hue), 48%, 8%, .1);
 }
 
+.light-theme .work__footer-tech{
+  background-color: var(--first-color);
+}
+
 .light-theme::-webkit-scrollbar{
   background-color: hsl(var(--second-hue), 8%, 66%);
   /* background-color: red; */
@@ -810,7 +814,9 @@ body.light-theme{
   border: 1px solid black;
   border-radius: .3rem;
   font-size: var(--tiny-font-size);
-  background-color: var(--first-color);
+  /* background-color: var(--first-color); */
+  background-color: white;
+
   padding: .3rem .5rem;
   color: black;
   display: flex;
@@ -1160,6 +1166,11 @@ body.light-theme{
   .work__img{
     height: 300px;
   }
+
+  .work__footer-tech i{
+    font-size: var(--small-font-size);;
+  }
+
   .contact__info{
     grid-template-columns: 300px;
     justify-content: center;

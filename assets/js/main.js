@@ -7,7 +7,7 @@ const portfolio = [
     codeUrl: "https://github.com/sdahal1/MERN_finance_tracker_backend",
     websiteUrl: "https://mern-finance-tracker-frontend.vercel.app/",
     description: "Fullstack MERN finance tracking application. Uses JWT and cookies for Auth. Renders beautiful charts based on users expenses. Allows for routing, expenses history, expenses input, search, filter, and sort through different dates, categories, and more. Full CRUD functionality. Utilizes MongoDB for persistent storage. NOTE: Currently this application only works on firefox!",
-    technology: ["HTML", "CSS", "JS", "EmailJS", "SwiperJS"],
+    technology: ["HTML", "CSS", "Javascript", "React", "Express", "NodeJS"],
     features: [
       "Fully responsive on all devices",
       "Personal user accounts",
@@ -23,7 +23,7 @@ const portfolio = [
     codeUrl: "https://github.com/sdahal1/Darrell-Humphries-Site",
     websiteUrl: "https://sdahal1.github.io/Darrell-Humphries-Site/",
     description: "This is a frontend portfolio website for a Cloud Engineer. Its purpose is to help the client showcase their cloud projects, background, and other skills/hobbies that are relevant to their marketing. It also provides a way to submit inquiries to the client which gets routed to their email.",
-    technology: ["HTML", "CSS", "JS", "EmailJS", "SwiperJS"],
+    technology: ["HTML", "CSS", "Javascript", "EmailJS", "SwiperJS"],
     features: [
       "Fully responsive on all devices",
       "Light mode/Dark mode",
@@ -38,7 +38,7 @@ const portfolio = [
     codeUrl: "https://github.com/sdahal1/SamplePortfolio/",
     websiteUrl: "https://sdahal1.github.io/SamplePortfolio/",
     description: "This is a frontend portfolio website for a Web Developer. Its purpose is to help the client showcase their projects, background, and other skills/hobbies that are relevant to their marketing. It also provides a way to submit inquiries to the client which gets routed to their email. It has a unique multi-page feel while still maintaining a one page application format",
-    technology: ["HTML", "CSS", "JS", "EmailJS", "SwiperJS"],
+    technology: ["HTML", "CSS", "Javascript", "EmailJS", "SwiperJS"],
     features: [
       "Fully responsive on all devices",
       "Light mode/Dark mode",
@@ -48,6 +48,14 @@ const portfolio = [
   }
   
 ]
+
+const techIconLookup = {
+  "html": "devicon-html5-plain",
+  "css": "devicon-css3-plain colored",
+  "javascript": "devicon-javascript-plain colored",
+  "react": "devicon-react-original colored",
+  "nodejs": "devicon-nodejs-plain-wordmark colored"
+}
 
 function generateWorkCard({ title = '', type = '', image = '', codeUrl = '', websiteUrl = '', description = '', technology = [], features = [] }) {
   const workCardHtml = `<div class="work__card mix ${type}">
@@ -70,18 +78,7 @@ function generateWorkCard({ title = '', type = '', image = '', codeUrl = '', web
     </span>
   </div>
   <div class="work__footer">
-    <div class="work__footer-tech">
-      <i class="devicon-html5-plain colored"></i>
-      <p>HTML5</p>
-    </div>
-    <div class="work__footer-tech">
-      <i class="devicon-css3-plain colored"></i>
-      <p>CSS3</p>
-    </div>
-    <div class="work__footer-tech">
-      <i class="devicon-javascript-plain colored"></i>
-      <p>Javascript</p>
-    </div>
+   ${generateWorkFooterTechSymbols(technology)}
   </div>
   <div class="work__modal">
     <div class="work__modal-content">
@@ -117,6 +114,18 @@ function generateFeatureList(features = []) {
   })
   return listItems
 
+}
+
+function generateWorkFooterTechSymbols(technologies=[]){
+  let technologiesHtml = ''
+  technologies.forEach(tech=>{
+    let content = `<div class="work__footer-tech">
+    <i class="${techIconLookup[tech.toLowerCase()]}"></i>
+    <p>${tech}</p>
+    </div>`
+    technologiesHtml += content;
+  })
+  return technologiesHtml;
 }
 
 function loadupWorkContainer() {
