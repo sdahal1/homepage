@@ -46,7 +46,7 @@ const portfolio = [
       "Swiper based testimonials and filtering options"
     ]
   }
-  
+
 ]
 
 const techIconLookup = {
@@ -103,22 +103,22 @@ function generateWorkCard({ title = '', type = '', image = '', codeUrl = '', web
 
 function generateFeatureList(features = []) {
   let listItems = ''
-  features.forEach(feature=>{
+  features.forEach(feature => {
     const featureItem = ` <li class="work__modal-item">
       <i class="bx bx-check work__modal-icon"></i>
       <p class="work__modal-info">
         ${feature}
       </p>
     </li>`
-    listItems+= featureItem;
+    listItems += featureItem;
   })
   return listItems
 
 }
 
-function generateWorkFooterTechSymbols(technologies=[]){
+function generateWorkFooterTechSymbols(technologies = []) {
   let technologiesHtml = ''
-  technologies.forEach(tech=>{
+  technologies.forEach(tech => {
     let content = `<div class="work__footer-tech">
     <i class="${techIconLookup[tech.toLowerCase()]}"></i>
     <p>${tech}</p>
@@ -316,19 +316,45 @@ sr.reveal(`.home__social, .home__scroll`, { delay: 900, origin: 'bottom' })
 emailjs.init('njr5lxe7yQZHyiPaV')
 
 window.onload = function () {
+  const submitButton = document.querySelector("#contact__form-submit-button");
+  const processNotification = document.getElementById('process-notification');
+  const successNotification = document.getElementById('success-notification');
+  const failureNotification = document.getElementById('failure-notification');
+
+
   document.getElementById('contact-form').addEventListener('submit', function (event) {
     // console.log("submitted form");
     event.preventDefault();
+    // processNotification.style.display = 'block';
+    processNotification.classList.add("active");
     // generate a five digit number for the contact_number variable
     // this.contact_number.value = Math.random() * 100000 | 0;
     // these IDs from the previous steps
-    emailjs.sendForm('service_8de57m5', 'template_u9cjkbk', '#contact-form', 'njr5lxe7yQZHyiPaV')
-      .then(function () {
+    submitButton.disabled = true;
+    emailjs.sendForm(
+      'service_8de57m5',
+      'template_u9cjkbk',
+      '#contact-form',
+      'njr5lxe7yQZHyiPaV'
+    )
+      .then((response) => {
+        processNotification.classList.remove("active");
         console.log('SUCCESS!');
+        successNotification.classList.add("active");
+        setTimeout(function () {
+          successNotification.classList.remove("active");
+        }, 3000);
         document.getElementById('contact-form').reset();
-      }, function (error) {
+        submitButton.disabled = false;
+      }).catch(error => {
+        processNotification.classList.remove("active");
         console.log('FAILED...', error);
-      });
+        failureNotification.classList.add("active");
+        setTimeout(function () {
+          failureNotification.classList.remove("active");
+        }, 3000);
+        submitButton.disabled = false;
+      })
   });
 }
 

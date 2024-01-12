@@ -815,8 +815,20 @@
               <textarea cols="30" rows="10" class="contact__form-input" placeholder="Write me your inquiry"
                 id="message_input" name="user_message"></textarea>
             </div>
-            <button class="button">Send Message</button>
+            <button class="button" id="contact__form-submit-button">Send Message</button>
           </form>
+          <!-- Notification message container -->
+          <div class="notification" id="process-notification">
+            <i class='bx bx-time-five' ></i>
+            Sending email now ...
+          </div>
+          <div class="notification" id="success-notification">
+            <i class='bx bx-message-square-check'></i>
+            Your email has been sent successfully and a representative will get in touch with you.
+          </div>
+          <div class="notification" id="failure-notification">
+            There was a problem with this operation. Please email Saurabh directly: sdahal1@yahoo.com
+          </div>
         </div>
       </div>
     </section>

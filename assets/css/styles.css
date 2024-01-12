@@ -991,6 +991,44 @@ body.light-theme{
   resize: none;
 }
 
+.notification {
+  display: none;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(187, 206, 207);
+  opacity: 0.9;
+  width: 100%;
+  z-index: 1000;
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+
+.notification.active{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  /* border: 1px solid red; */
+}
+
+.contact__content{
+  position: relative;
+}
+
+#success-notification{
+  background-color: rgb(161, 203, 161);
+}
+
+#failure-notification{
+  background-color: rgb(244, 106, 94);
+}
+
 
 /*=============== FOOTER ===============*/
 .footer{
