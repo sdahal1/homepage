@@ -1,3 +1,145 @@
+/*=============== LOAD PORTFOLIO CONTENT ===============*/
+const portfolio = [
+  {
+    title: "Cloud Engineer Portfolio",
+    type: "web frontend",
+    image: "cloud.jpeg",
+    codeUrl: "https://github.com/sdahal1/Darrell-Humphries-Site",
+    websiteUrl: "https://sdahal1.github.io/Darrell-Humphries-Site/",
+    description: "This is a frontend portfolio website for a Cloud Engineer. Its purpose is to help the client showcase their cloud projects, background, and other skills/hobbies that are relevant to their marketing. It also provides a way to submit inquiries to the client which gets routed to their email.",
+    technology: ["HTML", "CSS", "JS", "EmailJS", "SwiperJS"],
+    features: [
+      "Fully responsive on all devices",
+      "Light mode/Dark mode",
+      "Email communications feature",
+      "Swiper based testimonials and filtering options"
+    ]
+  },
+  {
+    title: "Web Developer Portfolio",
+    type: "web frontend",
+    image: "developer.jpeg",
+    codeUrl: "https://github.com/sdahal1/SamplePortfolio/",
+    websiteUrl: "https://sdahal1.github.io/SamplePortfolio/",
+    description: "This is a frontend portfolio website for a Web Developer. Its purpose is to help the client showcase their projects, background, and other skills/hobbies that are relevant to their marketing. It also provides a way to submit inquiries to the client which gets routed to their email. It has a unique multi-page feel while still maintaining a one page application format",
+    technology: ["HTML", "CSS", "JS", "EmailJS", "SwiperJS"],
+    features: [
+      "Fully responsive on all devices",
+      "Light mode/Dark mode",
+      "Email communications feature",
+      "Swiper based testimonials and filtering options"
+    ]
+  },
+  {
+    title: "FinnaTrack",
+    type: "web fullstack",
+    image: "finnatrack.jpeg",
+    codeUrl: "https://github.com/sdahal1/MERN_finance_tracker_backend",
+    websiteUrl: "https://mern-finance-tracker-frontend.vercel.app/",
+    description: "Fullstack MERN finance tracking application. Uses JWT and cookies for Auth. Renders beautiful charts based on users expenses. Allows for routing, expenses history, expenses input, search, filter, and sort through different dates, categories, and more. Full CRUD functionality. Utilizes MongoDB for persistent storage. NOTE: Currently this application only works on firefox!",
+    technology: ["HTML", "CSS", "JS", "EmailJS", "SwiperJS"],
+    features: [
+      "Fully responsive on all devices",
+      "Personal user accounts",
+      "Create, view, monitor, update, and delete expenses",
+      "Search and sort through expenses based on multiple parameters such as date, month, category, etc",
+      "Sophisticated charts and graphs to visualize spending"
+    ]
+  }
+]
+
+function generateWorkCard({title='', type='', image='', codeUrl='', websiteUrl='', description='', technology=[], features=[]}){
+  const workCardHtml = `<div class="work__card mix ${type}">
+  <img src="./assets/img/${image}" alt="" class="work__img" />
+
+  <h3 class="work__title">${title}</h3>
+  <div class="work__overlay">
+    <h4>${title}</h4>
+    <a href="${codeUrl}" target="_blank" class="work__button">
+      View Code
+      <i class='bx bxl-github work__icon'></i>
+    </a>
+    <a href="${websiteUrl}" target="_blank" class="work__button">
+      Visit Website
+      <i class="bx bx-right-arrow-alt work__icon"></i>
+    </a>
+    <span class="work__button work__button-modal">
+      More Info
+      <i class="bx bx-right-arrow-alt work__icon"></i>
+    </span>
+  </div>
+  <div class="work__footer">
+    <div class="work__footer-tech">
+      <i class="devicon-html5-plain colored"></i>
+      <p>HTML5</p>
+    </div>
+    <div class="work__footer-tech">
+      <i class="devicon-css3-plain colored"></i>
+      <p>CSS3</p>
+    </div>
+    <div class="work__footer-tech">
+      <i class="devicon-javascript-plain colored"></i>
+      <p>Javascript</p>
+    </div>
+  </div>
+  <div class="work__modal">
+    <div class="work__modal-content">
+      <i class="bx bx-x work__modal-close"></i>
+      <h3 class="work__modal-title">
+        ${title}
+      </h3>
+      <p class="work__modal-description">
+        ${description}
+      </p>
+      <p class="work__modal-tech-info">
+        Technology: ${technology.join(", ")}
+      </p>
+      <ul class="work__modal-list">
+        <li class="work__modal-item">
+          <i class="bx bx-check work__modal-icon"></i>
+          <p class="work__modal-info">
+            Fully responsive on all devices
+          </p>
+        </li>
+        <li class="work__modal-item">
+          <i class="bx bx-check work__modal-icon"></i>
+          <p class="work__modal-info">
+            Light mode/Dark mode
+          </p>
+        </li>
+        <li class="work__modal-item">
+          <i class="bx bx-check work__modal-icon"></i>
+          <p class="work__modal-info">
+            Email communications feature
+          </p>
+        </li>
+        <li class="work__modal-item">
+          <i class="bx bx-check work__modal-icon"></i>
+          <p class="work__modal-info">
+            Swiper based testimonials and filtering options
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>`
+  return workCardHtml;
+}
+
+function loadupWorkContainer(){
+  const workContainer = document.querySelector(".work__container");
+  workContainer.innerHTML=""
+  portfolio.forEach(project=>{
+    const workCard = generateWorkCard(project);
+    workContainer.innerHTML+= workCard;
+  })
+}
+
+loadupWorkContainer()
+
+
+
+
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader(){
     const header = document.getElementById('header');
@@ -192,3 +334,6 @@ window.onload = function() {
             });
     });
 }
+
+
+// window.addEventListener("DOMContentLoaded", loadupWorkContainer);
