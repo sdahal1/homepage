@@ -787,6 +787,7 @@ body.light-theme{
   font-size: var(--small-font-size);
   align-items: center;
   column-gap: .25rem;
+  cursor: pointer;
 }
 
 .work__button:hover .work__icon{
